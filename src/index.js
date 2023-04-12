@@ -1,5 +1,5 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React from 'react'; //Importacion de la libreria de React
+import ReactDOM from 'react-dom/client'; //Libreria para trabajar el DOM con react
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
