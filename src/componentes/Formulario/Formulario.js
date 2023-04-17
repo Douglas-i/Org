@@ -10,7 +10,8 @@ const Formulario = () => {
             <CampoTexto titulo="Nombre" placeholder="Ingresar nombre"/>
             <CampoTexto titulo="Puesto" placeholder="Ingresar puesto"/>
             <CampoTexto titulo="Foto" placeholder="Ingresar enlace de foto"/>
-            <ListaOpciones/>            
+            <ListaOpciones/>
+            <Boton />
         </form>        
     </section>
 }
