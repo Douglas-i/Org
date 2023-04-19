@@ -1,7 +1,7 @@
-const Boton = () => {
-    return <button>Boton</button>
+import './Boton.css'
+
+const Boton = (props) => {
+    return <button className='boton'>{props.texto}</button>
 };
-//Un comentario de manera local
-//Exportar el Boton para luedo poder importarlo para su uso
-//Esto lo hizo alvaro
+
 export default Boton;
