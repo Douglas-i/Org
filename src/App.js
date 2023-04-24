@@ -8,11 +8,19 @@ import Equipo from './componentes/Equipo';
 function App() {
   
   const [mostrarFormulario, actualizarMostrar] = useState(false);
-
+  const [colaboradores, actualizarColaboradores] = useState([]);
   //Ternario --> Condicion ? seMuestra: noseMuestra
 
   const cambiarMostrar = () => {
     actualizarMostrar(!mostrarFormulario)
+  }
+
+  //Registrar Colaborador
+  const registrarColaborador = (colaborador) => {
+    console.log("Nuevo Colaborador", colaborador);
+
+    //spread operator
+    actualizarColaboradores([...colaboradores, colaborador]);
   }
 
   //Lista de Equipos
@@ -57,10 +65,24 @@ function App() {
   return (
     <div>      
       <Header></Header>
-      {mostrarFormulario === true ? <Formulario equipos={equipos.map( (equipo) => equipo.titulo)}/> : <div/>}
+      {mostrarFormulario === true 
+        ? <Formulario 
+            equipos={equipos.map( (equipo) => equipo.titulo)}
+            registrarColaborador={registrarColaborador}
+          /> 
+        : <div/>
+      
+      }
+
       <MiOrg cambiarMostrar={cambiarMostrar}/>
+
       {
-        equipos.map( (equipo) => <Equipo datos={equipo} key={equipo.titulo}/>)
+        equipos.map( (equipo) => 
+        <Equipo 
+          datos={equipo} 
+          key={equipo.titulo}
+          colaboradores={colaboradores}
+        />)
       }
     </div>
   );
