@@ -1,7 +1,7 @@
 import './Colaborador.css'
 
 const Colaborador = (props) => {
-    const {nombre, puesto, foto, equipo} = props.datos;
+    const {nombre, puesto, foto} = props.datos;
 
     return <div className='colaborador'>
         <div className='encabezado'>
