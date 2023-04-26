@@ -17,10 +17,15 @@ function App() {
 
   //Registrar Colaborador
   const registrarColaborador = (colaborador) => {
-    console.log("Nuevo Colaborador", colaborador);
+    // console.log("Nuevo Colaborador", colaborador);
 
     //spread operator
     actualizarColaboradores([...colaboradores, colaborador]);
+  }
+
+  //Eliminar Colaborador
+  const eliminarColaborador = () => {
+    console.log("Eliminar");
   }
 
   //Lista de Equipos
@@ -82,6 +87,7 @@ function App() {
           datos={equipo} 
           key={equipo.titulo}
           colaboradores={colaboradores.filter( colaborador => colaborador.equipo === equipo.titulo)}
+          eliminarColaborador={eliminarColaborador}
         />)
       }
     </div>
